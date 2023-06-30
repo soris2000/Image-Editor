@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"></script>
+    <title> Image Editor</title>
+</head>
+
+<body>
+    <h1>Image Editor</h1>
+    <main>
+        <div class="image-container">
+            <h3 class="header"><i class="fa fa-picture-o "></i> Preview image </h3>
+            <canvas id="canvas"></canvas>
+            <div class="file-buttons">
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="fa fa-upload"></i> Select Image
+                    <input id="file-upload" type="file" accept="image/*" />
+                </label>
+                <label for="download-btn" class="custom-file-download">
+                    <i class="fa fa-download"></i> Download
+                    <button id="download-btn"></button>
+                </label>
+            </div>
+        </div>
+
+        <div class="filters">
+            <div class="filter">
+                <h5>Brightness</h5>
+                <div class="ajust-display">
+                    <input type="range" id="brightness" min="0" max="200" value="100">
+                    <p id="p-brightness">100</p>
+                </div>
+            </div>
+            <div class="filter">
+                <h5>Contrast </h5>
+                <div class="ajust-display">
+                    <input type="range" id="contrast" min="0" max="200" value="100">
+                    <p id="p-contrast">100</p>
+                </div>
+            </div>
+            <div class="filter">
+                <h5>Saturation </h5>
+                <div class="ajust-display">
+                    <input type="range" id="saturation" min="0" max="200" value="100">
+                    <p id="p-saturation">100</p>
+                </div>
+            </div>
+
+            <div class="filter">
+                <h5>Sepia </h5>
+                <div class="ajust-display">
+                    <input type="range" id="sepia" min="0" max="100" value="0">
+                    <p id="p-sepia">0</p>
+                </div>
+            </div>
+            <div class="filter">
+                <h5>Hue-rotate </h5>
+                <div class="ajust-display">
+                    <input type="range" id="hue" min="0" max="360" value="0">
+                    <p id="p-hue">0</p>
+                </div>
+            </div>
+
+            <div class="filter">
+                <h5>Blur </h5>
+                <div class="ajust-display">
+                    <input type="range" id="blur" min="0" max="200" value="0">
+                    <p id="p-blur">0</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+            <button id="vintage">Vintage</button>
+            <button id="lomo">Lomo</button>
+            <button id="clarity">Clarity</button>
+            <button id="sin-city">Sin City</button>
+            <button id="cross-process">Cross Process</button>
+            <button id="pinhole">Pinhole</button>
+            <button id="nostalgia">Nostalgia</button>
+            <button id="her-majesty">Her Majesty</button>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
